@@ -26,15 +26,16 @@ const StoresList = () => {
     e.preventDefault();
     const getGeolocation = inputSearch.split(',');
 
-    const getClosest = () => {
+    const getDistance = () => {
       return api.map((item) => {
         const latitude = parseFloat(item.latitude - getGeolocation[0]);
         const longitude = parseFloat(item.longitude - getGeolocation[1]);
-        return Math.sqrt(Math.pow(latitude, 2) + Math.pow(longitude, 2))
+        const distanceCalc = Math.sqrt(Math.pow(latitude, 2) + Math.pow(longitude, 2))
+        return {...item, distance: distanceCalc}
       })
     }
 
-    console.log(getClosest())
+    console.log(getDistance().sort((a, b) => a.distance - b.distance).slice(0, 3));
   }
 
   return (
