@@ -4,7 +4,7 @@ const Button = ({ id, text, onClick, ...props}) => {
   return (
     <button 
       id={id} 
-      onChange={onClick} 
+      onClick={onClick} 
       {...props}
     >
       {text}

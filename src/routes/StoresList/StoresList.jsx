@@ -19,16 +19,30 @@ const StoresList = () => {
     };
     fetchData();
   }, [])
-  console.log(api);
+  
+  const [inputSearch, setInputSearch] = useState('');
+  
+  const search = (e) => {
+    e.preventDefault();
+    console.log(inputSearch);
+    console.log(api);
+
+    const getGeolocation = inputSearch.split(',');
+    console.log(getGeolocation);
+  }
 
   return (
     <>
       <div>
         <Input
           placeholder="Busque por endereço ou CEP"
+          type="text"
+          onChange={(e) => setInputSearch(e.target.value)}
         />
         <Button
           text="Buscar"
+          type="submit"
+          onClick={(e) => search(e)}
         />
       </div>
       <p>stores</p>
