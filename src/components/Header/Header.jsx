@@ -2,6 +2,7 @@ import React from 'react';
 
 import Logo from '../Logo';
 import Icon from '../Icon';
+import PitchBar from '../PitchBar';
 
 const Header = () => {
   return (
@@ -19,6 +20,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
+      <PitchBar />
     </header>
   )
 }
