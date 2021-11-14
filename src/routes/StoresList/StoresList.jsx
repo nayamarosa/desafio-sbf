@@ -24,11 +24,17 @@ const StoresList = () => {
   
   const search = (e) => {
     e.preventDefault();
-    console.log(inputSearch);
-    console.log(api);
-
     const getGeolocation = inputSearch.split(',');
-    console.log(getGeolocation);
+
+    const getClosest = () => {
+      return api.map((item) => {
+        const latitude = parseFloat(item.latitude - getGeolocation[0]);
+        const longitude = parseFloat(item.longitude - getGeolocation[1]);
+        return Math.sqrt(Math.pow(latitude, 2) + Math.pow(longitude, 2))
+      })
+    }
+
+    console.log(getClosest())
   }
 
   return (
