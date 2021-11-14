@@ -5,7 +5,7 @@ import RoutesList from "../../routes";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 
-import '../../assets/styles/mains.scss';
+import '../../assets/styles/main.scss';
 
 const App = () => {
   return (
