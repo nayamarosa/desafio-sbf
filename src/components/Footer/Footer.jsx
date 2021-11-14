@@ -5,7 +5,7 @@ import Icon from '../Icon';
 const Footer = () => {
   return (
     <footer>
-      <nav>
+      <nav class="container">
 
         <ul>
           <li>

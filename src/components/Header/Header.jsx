@@ -7,7 +7,7 @@ import PitchBar from '../PitchBar';
 const Header = () => {
   return (
     <header>
-      <nav>
+      <nav class="container">
         <h1>
           <Logo />
         </h1>
