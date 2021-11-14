@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import Button from "../../components/Button/Button";
+
+import Input from "../../components/Input";
 
 const StoresList = () => {
   const [api, setApi] = useState([]);
@@ -19,7 +22,17 @@ const StoresList = () => {
   console.log(api);
 
   return (
-    <p>stores</p>
+    <>
+      <div>
+        <Input
+          placeholder="Busque por endereço ou CEP"
+        />
+        <Button
+          text="Buscar"
+        />
+      </div>
+      <p>stores</p>
+    </>
   );
 }
 
