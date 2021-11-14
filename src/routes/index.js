@@ -1,11 +1,11 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import StoresList from './StoresList';
+import Stores from './Stores';
 
 const RoutesList = () => (
   <Routes>
-    <Route exact path="/" element={ <StoresList/> }></Route>
+    <Route exact path="/" element={ <Stores/> }></Route>
   </Routes>
 );
 
