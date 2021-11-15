@@ -1,0 +1,11 @@
+.button {
+  padding: 16px 24px;
+  background-color: none;
+  @include font(16px, 700, 1);
+  border: none;
+  border-radius: 50px;
+  &__primary {
+    background-color: $black;
+    color: $white;
+  }
+}

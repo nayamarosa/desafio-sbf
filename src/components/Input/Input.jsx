@@ -2,7 +2,7 @@ import React from 'react';
 
 const Input = ({ id, label, onChange, ...props}) => {
   return (
-    <input 
+    <input class="input"
       id={id} 
       onChange={onChange} 
       {...props}
