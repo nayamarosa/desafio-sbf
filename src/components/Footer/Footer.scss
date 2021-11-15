@@ -1,0 +1,93 @@
+.footer {
+  background-color: $black;
+  color: $white;
+
+  &--container{
+    padding: 24px 0;
+  }
+  
+  &__infos {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    @include font(16px, 700, 1.5);
+    text-transform: uppercase;
+    border-bottom: 1px solid $gray;
+    &-item {
+      margin: 8px 0;
+      &:last-child {
+        margin-bottom: 24px;
+      }
+    }
+  }
+  
+  &__help p, &__about p,
+  &__social p , &__payments p {
+    @include font(14px, 400, 1.5);
+    text-transform: uppercase;
+  }
+
+  &__help p {
+    padding: 16px 0;
+    border-top: 1px solid $gray;
+    border-bottom: 1px solid $gray;
+  }
+  
+  &__about {
+    & p {
+      padding: 16px 0;
+      border-top: 1px solid $gray;
+      border-bottom: 1px solid $gray;
+    }
+    &-list {
+      padding: 4px 16px 16px;
+      display: flex;
+      flex-direction: column;
+      &-item {
+        margin: 4px 0;
+        @include font(12px, 400, 1.5);
+        text-transform: capitalize;
+        color: $light-gray;
+      }
+    }
+  }
+  
+  &__social {
+    margin: 24px 0 0;
+    & p {
+      margin-bottom: 16px;
+    }
+    &-list {
+      display: flex;
+    }
+  }
+  
+  &__payments {
+    margin: 24px 0 0;
+    border-bottom: 1px solid $gray;
+    & p {
+      margin-bottom: 16px;
+    }
+    &-list {
+      margin-bottom: 24px;
+      width: 70%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  
+  &__others {
+    margin: 24px 0 0;
+    @include font(12px, 400, 1.5);
+    text-transform: capitalize;
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      color: $light-gray;
+    }
+    &--rights {
+      text-align: center;
+      color: $gray;
+    }
+  }
+}

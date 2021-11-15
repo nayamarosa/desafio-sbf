@@ -4,61 +4,61 @@ import Icon from '../Icon';
 
 const Footer = () => {
   return (
-    <footer>
+    <footer class="footer footer--container">
       <nav class="container">
 
-        <ul>
-          <li>
-            <a href="/">encontre uma loja nike</a>
+        <ul class="footer__infos">
+          <li class="footer__infos-item">
+            <a href="/"><p>encontre uma loja nike</p></a>
           </li>
-          <li>
-            <a href="/">cadastre-se para receber novidades</a>
+          <li class="footer__infos-item">
+            <a href="/"><p>cadastre-se para receber novidades</p></a>
           </li>
-          <li>
-            <a href="/">mapa do site</a>
+          <li class="footer__infos-item">
+            <a href="/"><p>mapa do site</p></a>
           </li>
         </ul>
 
-        <div>
-          <p>ajuda</p>
+        <div class="footer__help">
+        <p>ajuda</p>
         </div>
 
-        <div>
+        <div class="footer__about">
           <p>sobre a nike</p>
-          <ul>
-            <li>
+          <ul class="footer__about-list">
+            <li class="footer__about-list-item">
               <a href="/">dúvidas gerais</a>
             </li>
-            <li>
+            <li class="footer__about-list-item">
               <a href="/">encontre o seu tamanho</a>
             </li>
-            <li>
+            <li class="footer__about-list-item">
               <a href="/">entregas</a>
             </li>
-            <li>
+            <li class="footer__about-list-item">
               <a href="/">pedidos</a>
             </li>
-            <li>
+            <li class="footer__about-list-item">
               <a href="/">trocas e devoluções</a>
             </li>
-            <li>
+            <li class="footer__about-list-item">
               <a href="/">pagamentos</a>
             </li>
-            <li>
+            <li class="footer__about-list-item">
               <a href="/">produtos</a>
             </li>
-            <li>
+            <li class="footer__about-list-item">
               <a href="/">corporativo</a>
             </li>
-            <li>
+            <li class="footer__about-list-item">
               <a href="/">fale conosco</a>
             </li>
           </ul>
         </div>
         
-        <div>
+        <div class="footer__social">
           <p>redes sociais</p>
-          <ul>
+          <ul class="footer__social-list">
             <li>
               <a href="/">
                 <Icon icon="./images/logo_redes_sociais_facebook.svg" alt="Facebook" />
@@ -77,9 +77,9 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div>
-          <p>pagamentos</p>
-          <ul>
+        <div class="footer__payments">
+          <p>formas de pagamentos</p>
+          <ul class="footer__payments-list">
             <li>
               <Icon icon="./images/pgto_Mastercard.svg" alt="Mastecard" />
             </li>
@@ -104,9 +104,9 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div>
-          <ul>
-          <li>
+        <div class="footer__others">
+          <ul class="footer__others-list">
+            <li>
               <a href="/">brasil</a>
             </li>
             <li>
@@ -118,7 +118,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <p>
+        <p class="footer__others footer__others--rights">
         © 2021 Nike. Todos os direitos reservados. Fisia Comércio de Produtos Esportivos Ltda - CNPJ: 59.546.515/0016-10 Rua José Semião Rodrigues Agostinho, 1370 - Galpão Unidade 17 - Nível 0, 1 e 2 - CEP 06833-300 - Embu das Artes/SP.
         </p>
       </nav>
