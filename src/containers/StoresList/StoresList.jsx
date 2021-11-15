@@ -5,6 +5,7 @@ import api from '../../api'
 import Input from '../../components/Input';
 import Icon from '../../components/Icon'
 import StoresItem from '../../components/StoresItem';
+import Maps from '../../containers/Maps';
 
 export const getCoordinates = (inputValue) => {
   return inputValue.split(',');
@@ -15,8 +16,7 @@ export const getDistance = (inputValue, api) => {
   const latitude = parseFloat(item.latitude - getCoordinates(inputValue)[0]);
   const longitude = parseFloat(item.longitude - getCoordinates(inputValue)[1]);
   const distanceCalc = Math.sqrt(Math.pow(latitude, 2) + Math.pow(longitude, 2))
-    console.log(distanceCalc)
-    return {...item, distance: distanceCalc}
+  return {...item, distance: distanceCalc}
   })
 }
 
@@ -31,7 +31,6 @@ const StoresList = () => {
 
   useEffect(() => {
     apiImport();
-    console.log(closestStores)
   }, [])
 
   const search = (e, inputSearch) => {
@@ -58,14 +57,17 @@ const StoresList = () => {
       </form>
       <>
       { closestStores.length > 0 &&
-        <section class="stores__result">
-          <div class="stores__result-filter">
-            <p>Menor distância</p>
-            <Icon icon="./images/icon_seta_baixo.svg" alt="Seta para  baixo"/>
+        <section class="stores__section">
+          <div class="stores__result">
+            <div class="stores__result-filter">
+              <p>Menor distância</p>
+              <Icon icon="./images/icon_seta_baixo.svg" alt="Seta para  baixo"/>
+            </div>
+            <ul class="stores__result-list" data-testid="list">
+              {closestStores.map((item, index) => <StoresItem name={item.name} adress={item.adress} key={index}/>)}
+            </ul>
           </div>
-          <ul class="stores__result-list" data-testid="list">
-            {closestStores.map((item, index) => <StoresItem name={item.name} adress={item.adress} key={index}/>)}
-          </ul>
+          <Maps coordinates={inputSearch} closests={closestStores}/>
         </section>
       }
       </>
