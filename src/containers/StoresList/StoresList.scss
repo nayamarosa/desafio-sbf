@@ -24,15 +24,31 @@
       }
     }
   }
+  &__section {
+    width: 100%;
+    @media (min-width: 1024px){
+      display: flex;
+      justify-content: space-between;
+    }
+  }
   &__result {
     margin-bottom: 32px;
     padding: 16px 0;
     background-color: $light-gray;
     border-radius: 8px;
+    @media (min-width: 1024px){
+      width: 45%;
+      height: 640px;
+      box-sizing: border-box;
+    }
     &-list {
       width: 100%;
       display: flex;
       flex-direction: column;
+      @media (min-width: 1024px){
+        height: 94%;
+        overflow-y: scroll;
+      }
     }
     &-filter {
       margin-bottom: 16px;
