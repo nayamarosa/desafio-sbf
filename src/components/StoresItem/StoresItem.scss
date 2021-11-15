@@ -1,0 +1,32 @@
+.stores__list {
+  &-item {
+    margin: 16px 0;
+    padding: 0 16px;
+    &--title {
+      margin-bottom: 8px;
+      @include font(24px, 500, auto);
+    }
+    &--map {
+      margin-bottom: 16px;
+      @include font(16px, 400, 1.5);
+      text-decoration: underline;
+    }
+    &-group {
+      padding: 24px;
+      background-color: $white;
+      color: $dark-gray;
+      border-radius: 8px;
+      & span {
+        @include font(12px, 700, 1.5);
+        color: #006611;
+      }
+    }
+    &--address {
+      margin-bottom: 8px;
+      @include font(14px, 400, 1.5);
+    }
+    &--time {
+      @include font(12px, 400, 1.5);
+    }
+  }
+}
