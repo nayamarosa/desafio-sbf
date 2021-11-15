@@ -1,9 +1,53 @@
 .header {
   &__nav {
+    display: none;
+    @media (min-width: 1024px){
+      height: 72px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-list {
+      @media (min-width: 1024px){
+        display: flex;
+      }
+      &-item {
+        @media (min-width: 1024px){
+          margin-right: 24px;
+          @include font(16px, 500, 1);
+        }
+        &:last-child {
+          @media (min-width: 1024px){
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    &-group {
+      @media (min-width: 1024px){
+        display: flex;
+      }
+      & input {
+        @media (min-width: 1024px){
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+  &__logo {
+    width: 37px;
+    @media (min-width: 1024px){
+      width: 61px;
+    }
+  }
+  &__mobile {
     height: 66px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (min-width: 1024px){
+      display: none;
+    }
     &-list {
       display: flex;
       &-item {
@@ -12,8 +56,5 @@
         }
       }
     }
-  }
-  &__logo {
-    width: 37px;
   }
 }

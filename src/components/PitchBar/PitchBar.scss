@@ -3,17 +3,30 @@
   display: flex;
   align-items: center;
   background-color: $light-gray;
+  @media (min-width: 1024px){
+    height: 40px;
+  }
   &__group {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media (min-width: 1024px){
+      flex-direction: row;
+      justify-content: center;
+    }
     & img {
       width: 22px;
+      @media (min-width: 1024px){
+        margin-right: 24px;
+      }
     }
     & p {
       margin-top: 4px;
       @include font(12px, 400, 18px);
+      @media (min-width: 1024px){
+        @include font(14px, 400, 1);
+      }
       & span {
         text-decoration: underline;
       }
