@@ -2,7 +2,7 @@ import React from 'react';
 
 const Logo = () => {
   return (
-    <img src="./images/logo_nike.svg" alt="Logo Nike" />
+    <img class="logo" src="./images/logo_nike.svg" alt="Logo Nike" />
   )
 }
 

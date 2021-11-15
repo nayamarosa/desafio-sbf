@@ -1,0 +1,19 @@
+.header {
+  &__nav {
+    height: 66px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-list {
+      display: flex;
+      &-item {
+        &:first-child {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+  &__logo {
+    width: 37px;
+  }
+}
