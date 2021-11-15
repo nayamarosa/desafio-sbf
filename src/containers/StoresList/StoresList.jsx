@@ -4,7 +4,6 @@ import Button from "../../components/Button/Button";
 import api from '../../api'
 import Input from "../../components/Input";
 import StoresItem from "../../components/StoresItem";
-import Newsletter from "../../components/Newsletter/Newsletter";
 
 export const getCoordinates = (inputValue) => {
   return inputValue.split(',');
@@ -41,7 +40,8 @@ const StoresList = () => {
 
   return (
     <>
-      <form>
+      <h1 class="stores__title">lojas</h1>
+      <form class="stores__form">
         <Input
           placeholder="Busque por endereço ou CEP"
           type="text"
@@ -55,14 +55,11 @@ const StoresList = () => {
           onClick={(e) => search(e, inputSearch)}
         />
       </form>
-      <p>stores</p>
-      <ul data-testid="list">
+      <ul class="stores__list" data-testid="list">
         { closestStores !== undefined &&
           (closestStores.map((item, index) => <StoresItem name={item.name} adress={item.adress} key={index}/>))
         }
       </ul>
-
-      <Newsletter />
     </>
   );
 }

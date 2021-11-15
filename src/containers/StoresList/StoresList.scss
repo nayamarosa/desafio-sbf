@@ -1,0 +1,16 @@
+.stores {
+  &__title {
+    margin-bottom: 32px;
+    @include font(32px, 500, auto);
+    text-transform: capitalize;
+  }
+  &__form {
+    width: 100%;
+    & button {
+      display: none;
+    }
+  }
+  &__list {
+
+  }
+}
