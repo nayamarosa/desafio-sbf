@@ -1,0 +1,29 @@
+.subheader {
+  display: none;
+  @media (min-width: 1024px){
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $light-gray;
+  }
+  &__logo {
+    display: flex;
+    & img:first-child {
+      margin-right: 20px;
+    }
+  }
+  &__list {
+    display: flex;
+    &-item {
+      padding: 0 16px;
+      @include font(12px, 400, 1);
+      color: $dark-gray;
+      border-right: 1px solid $dark-gray;
+      &:last-child {
+        padding: 0 0 0 16px;
+        border-right: none;
+      }
+    }
+  }
+}
