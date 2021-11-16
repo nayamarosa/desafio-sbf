@@ -5,6 +5,7 @@ import api from '../../api'
 import Input from '../../components/Input';
 import Icon from '../../components/Icon'
 import StoresItem from '../../components/StoresItem';
+import MapsStatic from '../../containers/MapsStatic';
 import Maps from '../../containers/Maps';
 
 export const getCoordinates = (inputValue) => {
@@ -67,7 +68,10 @@ const StoresList = () => {
               {closestStores.map((item, index) => <StoresItem name={item.name} adress={item.adress} key={index}/>)}
             </ul>
           </div>
-          <Maps coordinates={inputSearch} closests={closestStores}/>
+          <div class="map">
+            <Maps props coordinates={inputSearch} closests={closestStores} />
+          </div>
+          {/* <MapsStatic coordinates={inputSearch} closests={closestStores}/> */}
         </section>
       }
       </>

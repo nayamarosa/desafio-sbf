@@ -1,0 +1,35 @@
+.mapStatic {
+  padding: 15px;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @media (min-width: 1024px){
+    padding: 0;
+    position: inherit;
+  }
+  &__close {
+    padding: 14px 22px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: $white;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+    @media (min-width: 1024px){
+      display: none;
+    }
+  }
+  & .map__close img {
+    width: auto;
+    height: 20px;
+    box-shadow: none;
+  }
+  & img {
+    width: 100%;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+    @media (min-width: 1024px){
+      border-radius: 0;
+    }
+  }
+}

@@ -1,17 +1,39 @@
 import React from 'react';
+import { Map, GoogleApiWrapper, Marker  } from 'google-maps-react';
+  
 
-const Maps = ({ coordinates, closests }) => {
+export const Maps = (props) => {
+  const coordinates = props.coordinates.split(',');
   const onlyCoordinates = [];
-  closests.map(item => onlyCoordinates.push([item.latitude, item.longitude]))
-  const first = onlyCoordinates[0].toString()
-  const second = onlyCoordinates[1].toString()
-  const third = onlyCoordinates[2].toString()
+  props.closests.map(item => onlyCoordinates.push([item.latitude, item.longitude]))
+  
+  const displayMarkers = () => {
+    return onlyCoordinates.map((store, index) => {
+      return <Marker key={index} id={index} position={{
+        lat: store[0],
+        lng: store[1]
+      }}
+      icon={{
+        url: './images/icon_pin_mapa.svg'
+      }}
+      />
+    })
+  }
 
-  return (
-    <div class="map">
-      <img src={`https://maps.googleapis.com/maps/api/staticmap?center=${coordinates.replace(' ', '')}&zoom=12&size=650x650&markers=icon:https://tinyurl.com/marker-sbf-map%7C${first}%7C${second}%7C${third}&key=AIzaSyBw8WeeewqjZyMl8R0SmOZjBnAmWgP6Pu0`} alt="Mapa com localização das lojas próximas" />
-    </div>
-  )
+    return (
+        <Map
+          google={props.google}
+          zoom={12}
+          initialCenter={{ lat: coordinates[0], lng: coordinates[1] }}
+          icon={props.path}
+        >
+          {displayMarkers()}
+        </Map>
+    );
 }
 
-export default Maps;
+export default GoogleApiWrapper(
+  () => ({
+    apiKey: 'AIzaSyBw8WeeewqjZyMl8R0SmOZjBnAmWgP6Pu0',
+  }
+  ))(Maps);

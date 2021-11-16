@@ -38,7 +38,7 @@
     border-radius: 8px;
     @media (min-width: 1024px){
       width: 45%;
-      height: 640px;
+      height: 540px;
       box-sizing: border-box;
     }
     &-list {
@@ -56,6 +56,9 @@
       display: flex;
       justify-content: flex-end;
       align-items: center;
+      @media (min-width: 1024px){
+        justify-content: flex-start;
+      }
       & p {
         margin-right: 24px;
         @include font(14px, 400, 1.5);

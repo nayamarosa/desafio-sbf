@@ -10,6 +10,9 @@
       margin-bottom: 16px;
       @include font(16px, 400, 1.5);
       text-decoration: underline;
+      @media (min-width: 1024px){
+        display: none;
+      }
     }
     &-group {
       padding: 24px;
