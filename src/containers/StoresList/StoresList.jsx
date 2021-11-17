@@ -28,6 +28,7 @@ const StoresList = () => {
   const [apiData, setApiData] = useState([]);
   const [inputSearch, setInputSearch] = useState('');
   const [closestStores, setClosestStores] = useState([]);
+  const [centerMap, setCenterMap] = useState([]);
 
   const apiImport = async() => {
     setApiData(await api.apiRes());
@@ -40,6 +41,17 @@ const StoresList = () => {
   const search = (e, inputSearch) => {
     e.preventDefault();
     setClosestStores(getDistance(inputSearch, apiData).sort((a, b) => a.distance - b.distance).slice(0, 3));
+  }
+
+  const getCenterMap = (e, coordinates) => {
+    e.preventDefault();
+    setCenterMap([coordinates.latitude, coordinates.longitude])
+  }
+
+  const openMap = (e) => {
+    e.preventDefault();
+    const closeBtn = document.querySelector('.map');
+    closeBtn.classList.add('show');
   }
 
   return (
@@ -68,11 +80,11 @@ const StoresList = () => {
               <Icon icon="./images/icon_seta_baixo.svg" alt="Seta para  baixo"/>
             </div>
             <ul className="stores__result-list" data-testid="list">
-              {closestStores.map((item, index) => <StoresItem name={item.name} adress={item.adress} key={index} onClick={() => console.log(item)}/>)}
+              {closestStores.map((item, index) => <StoresItem name={item.name} adress={item.adress} key={index} onClick={(e) => {getCenterMap(e, item); openMap(e);}}/>)}
             </ul>
           </div>
-          <div className="map">
-            <Maps props coordinates={inputSearch} closests={closestStores} />
+          <div className={`map ${window.screen.width > 1024 ? 'show' : 'hidden'}`}>
+            <Maps props coordinates={inputSearch} closests={closestStores} mobileMap={centerMap} />
           </div>
         </section>
       }

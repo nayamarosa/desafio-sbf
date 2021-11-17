@@ -5,6 +5,8 @@ import Icon from '../../components/Icon';
 
 export const Maps = (props) => {
   const coordinates = props.coordinates.split(',');
+  console.log(props)
+  console.log(props.mobileMap)
   const onlyCoordinates = [];
   props.closests.map(item => onlyCoordinates.push([item.latitude, item.longitude]))
 
@@ -26,6 +28,7 @@ export const Maps = (props) => {
   const closeMap = (e) => {
     e.preventDefault();
     const closeBtn = document.querySelector('.map');
+    closeBtn.classList.remove('show');
     closeBtn.classList.add('hidden');
   }
 
@@ -37,7 +40,11 @@ export const Maps = (props) => {
       <Map
         google={props.google}
         zoom={12}
-        initialCenter={{ lat: coordinates[0], lng: coordinates[1] }}
+        initialCenter={
+          props.mobileMap.length <= 0
+          ? { lat: coordinates[0], lng: coordinates[1] }
+          : { lat: props.mobileMap[0], lng: props.mobileMap[1] }
+        }
       >
         {displayMarkers()}
       </Map>
