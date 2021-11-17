@@ -1,5 +1,23 @@
 .map {
-  width: 53%;
-  height: 540px;
-  position: relative;
+  padding: 48px 16px 16px;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $white;
+  box-sizing: border-box;
+  & div {
+    width: 100%;
+    height: 100%;
+    & div {
+      position: relative;
+    }
+  }
+  @media (min-width: 1024px){
+    padding: 0;
+    width: 53%;
+    height: 540px;
+    position: inherit;
+  }
 }
