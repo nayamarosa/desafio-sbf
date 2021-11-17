@@ -7,7 +7,7 @@
       @include font(24px, 500, auto);
     }
     &--map {
-      margin-bottom: 16px;
+      margin-left: 8px;
       @include font(16px, 400, 1.5);
       text-decoration: underline;
       @media (min-width: 1024px){
@@ -32,4 +32,10 @@
       @include font(12px, 400, 1.5);
     }
   }
+}
+
+.show-map {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
 }

@@ -31,7 +31,7 @@ export const Maps = (props) => {
 
   return (
     <>
-      <button class="icon__close" onClick={(e) => closeMap(e)}>
+      <button className="icon__close" onClick={(e) => closeMap(e)}>
         <Icon icon="./images/icon_close.svg" alt="Fechar mapa"/>
       </button>
       <Map

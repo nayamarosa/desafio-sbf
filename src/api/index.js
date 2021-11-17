@@ -8,6 +8,9 @@ const apiData = async () => {
   }
 };
 
+const apiList = () => apiData()
 const apiRes = () => apiData().then(data => data)
 
-export default { apiRes };
+const apis = { apiList, apiRes}
+
+export default apis;

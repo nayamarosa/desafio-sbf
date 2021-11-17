@@ -4,7 +4,7 @@ import StoresList from '../../containers/StoresList';
 
 const Stores = () => {
   return (
-    <main class="container stores">
+    <main className="container stores">
       <StoresList />
     </main>
   )

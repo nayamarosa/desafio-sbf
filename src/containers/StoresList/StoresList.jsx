@@ -5,19 +5,22 @@ import api from '../../api'
 import Input from '../../components/Input';
 import Icon from '../../components/Icon'
 import StoresItem from '../../components/StoresItem';
-import MapsStatic from '../../containers/MapsStatic';
 import Maps from '../../containers/Maps';
 
 export const getCoordinates = (inputValue) => {
   return inputValue.split(',');
 }
 
+export const calcDistance = (item, value) => {
+  const latitude = parseFloat(item.latitude - getCoordinates(value)[0]);
+  const longitude = parseFloat(item.longitude - getCoordinates(value)[1]);
+  const distanceCalc = Math.sqrt(Math.pow(latitude, 2) + Math.pow(longitude, 2))
+  return distanceCalc;
+}
+
 export const getDistance = (inputValue, api) => {
   return api.map((item) => {
-  const latitude = parseFloat(item.latitude - getCoordinates(inputValue)[0]);
-  const longitude = parseFloat(item.longitude - getCoordinates(inputValue)[1]);
-  const distanceCalc = Math.sqrt(Math.pow(latitude, 2) + Math.pow(longitude, 2))
-  return {...item, distance: distanceCalc}
+    return {...item, distance: calcDistance(item, inputValue)}
   })
 }
 
@@ -41,8 +44,8 @@ const StoresList = () => {
 
   return (
     <>
-      <h1 class="stores__title">lojas</h1>
-      <form class="stores__form">
+      <h1 className="stores__title">lojas</h1>
+      <form className="stores__form">
         <Input
           placeholder="Busque por endereço ou CEP"
           type="text"
@@ -58,20 +61,19 @@ const StoresList = () => {
       </form>
       <>
       { closestStores.length > 0 &&
-        <section class="stores__section">
-          <div class="stores__result">
-            <div class="stores__result-filter">
+        <section className="stores__section">
+          <div className="stores__result">
+            <div className="stores__result-filter">
               <p>Menor distância</p>
               <Icon icon="./images/icon_seta_baixo.svg" alt="Seta para  baixo"/>
             </div>
-            <ul class="stores__result-list" data-testid="list">
-              {closestStores.map((item, index) => <StoresItem name={item.name} adress={item.adress} key={index}/>)}
+            <ul className="stores__result-list" data-testid="list">
+              {closestStores.map((item, index) => <StoresItem name={item.name} adress={item.adress} key={index} onClick={() => console.log(item)}/>)}
             </ul>
           </div>
-          <div class="map">
+          <div className="map">
             <Maps props coordinates={inputSearch} closests={closestStores} />
           </div>
-          {/* <MapsStatic coordinates={inputSearch} closests={closestStores}/> */}
         </section>
       }
       </>
