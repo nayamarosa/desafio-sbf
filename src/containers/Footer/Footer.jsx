@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Icon from '../Icon';
-import Newsletter from '../Newsletter';
+import Icon from '../../components/Icon';
+import Newsletter from '../../components/Newsletter';
 
 
 const Footer = () => {

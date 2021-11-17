@@ -6,16 +6,16 @@
 
 @import '../../components/Logo/Logo.scss';
 @import '../../components/SubHeader/SubHeader.scss';
-@import '../../components/Header/Header.scss';
 @import '../../components/PitchBar/PitchBar.scss';
 @import '../../components/Input/Input.scss';
 @import '../../components/Button/Button.scss';
 @import '../../components/StoresItem/StoresItem.scss';
 @import '../../components/Newsletter/Newsletter.scss';
-@import '../../components/Footer/Footer.scss';
 
+@import '../../containers/Header/Header.scss';
 @import '../../containers/Maps/Maps.scss';
 @import '../../containers/MapsStatic/MapsStatic.scss';
 @import '../../containers/StoresList/StoresList.scss';
+@import '../../containers/Footer/Footer.scss';
 
 @import '../../routes/Stores/Stores.scss';

@@ -58,12 +58,14 @@ const StoresList = () => {
     <>
       <h1 className="stores__title">lojas</h1>
       <form className="stores__form">
-        <Input
-          placeholder="Busque por endereço ou CEP"
-          type="text"
-          data-testid="input-value"
-          onChange={(e) => setInputSearch(e.target.value)}
-        />
+        <label className="stores__form-label">
+          <Input
+            placeholder="Busque por endereço ou CEP"
+            type="text"
+            data-testid="input-value"
+            onChange={(e) => setInputSearch(e.target.value)}
+          />
+        </label>
         <Button
           text="Buscar"
           type="submit"

@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Logo from '../Logo';
-import Icon from '../Icon';
-import Input from '../Input';
-import PitchBar from '../PitchBar';
-import SubHeader from '../SubHeader/SubHeader';
+import Logo from '../../components/Logo';
+import Icon from '../../components/Icon';
+import Input from '../../components/Input';
+import PitchBar from '../../components/PitchBar';
+import SubHeader from '../../components/SubHeader/SubHeader';
 
 const Header = () => {
   return (
