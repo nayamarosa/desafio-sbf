@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stores List Route same snapshot list container 1`] = `
+<div>
+  <li>
+    <p>
+      loja1
+    </p>
+    <p>
+      rua1
+    </p>
+    <p>
+      horário de funcionamento
+    </p>
+  </li>
+  <li>
+    <p>
+      loja2
+    </p>
+    <p>
+      rua2
+    </p>
+    <p>
+      horário de funcionamento
+    </p>
+  </li>
+  <li>
+    <p>
+      loja3
+    </p>
+    <p>
+      rua3
+    </p>
+    <p>
+      horário de funcionamento
+    </p>
+  </li>
+</div>
+`;

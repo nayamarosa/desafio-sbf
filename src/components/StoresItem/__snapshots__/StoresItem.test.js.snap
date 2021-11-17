@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Store Item Component same snapshot component 1`] = `
+<li>
+  <p>
+    loja
+  </p>
+  <p>
+    Rua tal, número tal
+  </p>
+  <p>
+    horário de funcionamento
+  </p>
+</li>
+`;
