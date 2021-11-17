@@ -1,9 +1,24 @@
 .pitchbar {
+  // padding: 0 104px;
   height: 57px;
   display: flex;
   align-items: center;
   background-color: $light-gray;
+  & a {
+    padding-right: 1px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+    border-radius: 50%;
+    &:last-child {
+      padding-left: 1px;
+    }
+  }
   @media (min-width: 1024px){
+    padding: 0 120px;
     height: 40px;
   }
   &__group {
