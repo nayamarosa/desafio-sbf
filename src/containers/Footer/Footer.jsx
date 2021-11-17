@@ -25,7 +25,10 @@ const Footer = () => {
           </ul>
 
           <div className="footer__help">
-            <p>ajuda</p>
+            <div>
+              <p>ajuda</p>
+              <Icon icon='./images/icon_plus.svg' alt="Mostrar mais" />
+            </div>
             <ul className="footer__help-list">
               <li className="footer__help-list-item">
                 <a href="/">dúvidas gerais</a>
@@ -58,34 +61,16 @@ const Footer = () => {
           </div>
 
           <div className="footer__about">
-            <p>sobre a nike</p>
+            <div>
+              <p>sobre a nike</p>
+              <Icon icon='./images/icon_minus.svg' alt="Mostrar menos" />
+            </div>
             <ul className="footer__about-list">
               <li className="footer__about-list-item">
-                <a href="/">dúvidas gerais</a>
+                <a href="/">feito para jogar</a>
               </li>
               <li className="footer__about-list-item">
-                <a href="/">encontre o seu tamanho</a>
-              </li>
-              <li className="footer__about-list-item">
-                <a href="/">entregas</a>
-              </li>
-              <li className="footer__about-list-item">
-                <a href="/">pedidos</a>
-              </li>
-              <li className="footer__about-list-item">
-                <a href="/">trocas e devoluções</a>
-              </li>
-              <li className="footer__about-list-item">
-                <a href="/">pagamentos</a>
-              </li>
-              <li className="footer__about-list-item">
-                <a href="/">produtos</a>
-              </li>
-              <li className="footer__about-list-item">
-                <a href="/">corporativo</a>
-              </li>
-              <li className="footer__about-list-item">
-                <a href="/">fale conosco</a>
+                <a href="/">sustentabilidade</a>
               </li>
             </ul>
           </div>
