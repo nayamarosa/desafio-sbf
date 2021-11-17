@@ -62,7 +62,7 @@ const Header = () => {
             <Icon icon="./images/icon_sacola.svg" alt="Sacola" />
             </li>
           <li className="header__mobile-list-item">
-            <Icon icon="./images/icon_sacola.svg" alt="Menu" />
+            <Icon icon="./images/icon_menu.svg" alt="Menu" />
           </li>
         </ul>
       </nav>
