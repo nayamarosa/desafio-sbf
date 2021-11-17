@@ -1,6 +1,7 @@
 import React from 'react';
 import { Map, GoogleApiWrapper, Marker  } from 'google-maps-react';
   
+import Icon from '../../components/Icon';
 
 export const Maps = (props) => {
   const coordinates = props.coordinates.split(',');
@@ -22,15 +23,26 @@ export const Maps = (props) => {
     })
   }
 
-    return (
-        <Map
-          google={props.google}
-          zoom={12}
-          initialCenter={{ lat: coordinates[0], lng: coordinates[1] }}
-        >
-          {displayMarkers()}
-        </Map>
-    );
+  const closeMap = (e) => {
+    e.preventDefault();
+    const closeBtn = document.querySelector('.map');
+    closeBtn.classList.add('hidden');
+  }
+
+  return (
+    <>
+      <button class="icon__close" onClick={(e) => closeMap(e)}>
+        <Icon icon="./images/icon_close.svg" alt="Fechar mapa"/>
+      </button>
+      <Map
+        google={props.google}
+        zoom={12}
+        initialCenter={{ lat: coordinates[0], lng: coordinates[1] }}
+      >
+        {displayMarkers()}
+      </Map>
+    </>
+  );
 }
 
 export default GoogleApiWrapper(
