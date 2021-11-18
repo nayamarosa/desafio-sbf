@@ -5,12 +5,9 @@ import Icon from '../../components/Icon';
 
 export const Maps = (props) => {
   const coordinates = props.coordinates.split(',');
-  console.log(props)
-  console.log(props.mobileMap)
   const onlyCoordinates = [];
   props.closests.map(item => onlyCoordinates.push([item.latitude, item.longitude]))
 
-  
   const displayMarkers = () => {
     return props.closests.map((store, index) => {
       return <Marker key={index} id={index} position={{
