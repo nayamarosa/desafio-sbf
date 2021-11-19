@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Desafio SBF
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projeto realizado a partir de desafio proposto pela empresa SBF conforme enunciado abaixo:
+## Enunciado
 
-## Available Scripts
+Considerando um plano X,Y de tamanho MxN, em que o usuário estará numa determinada coordenada e as lojas em outras coordenadas, crie um algoritmo que seja capaz de ordenar as lojas pela menor distância e trazer as 3 lojas mais próximas.
 
-In the project directory, you can run:
+Como entradas do algoritmo, considere os seguintes parâmetros:
 
-### `yarn start`
+```text
+posicaoDoCliente = [X,Y], onde a entrada é um vetor de inteiros;
+lojas = [[X,Y]...[Xn, Yn]], onde a entrada é uma matriz 2xN de inteiros;
+plano = [M,N], onde a entrada é um vetor de inteiros.
+0 ≤ X ≤ M
+0 ≤ Y ≤ N
+0 ≤ M ≤ 1000
+0 ≤ N ≤ 1000
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Exemplo
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```text
+posicaoCliente = [20, 32],
+lojas = [[40,88], [18, 56], [99, 2]]
+plano = [100,100]
+```
 
-### `yarn test`
+## Resultado esperado
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```text
+[[18,56],[40,88],[99,2]]
+```
 
-### `yarn build`
+Considere a seguinte equação como fórmula para cálculo da distância entre o cliente e as lojas:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![image](https://s2.static.brasilescola.uol.com.br/be/2020/02/1-formula-distancia-entre-dois-pontos.jpeg)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Material de apoio
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Para esse desafio temos o layout proposto pelo time de Design:
 
-### `yarn eject`
+[Figma - Interface](https://www.figma.com/file/yP8EVezGVQyW6dftG3McY2/Teste-geolocaliza%C3%A7%C3%A3o-front-end?node-id=16%3A3570)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+[Figma - Protótipo](https://www.figma.com/proto/yP8EVezGVQyW6dftG3McY2/Teste-geolocaliza%C3%A7%C3%A3o-front-end?page-id=0%3A1&node-id=16%3A3055&viewport=2221%2C1362%2C0.37684541940689087&scaling=min-zoom&starting-point-node-id=16%3A3055&show-proto-sidebar=1)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[API disponível](https://api.gruposbf.com.br/geolocation-api/stores)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Solução técnica
 
-## Learn More
+Foi escolhido React para desenvolver o projeto.
+Para estilo foi utilizado Sass.
+O mapa foi feito utilizando a lib google-maps-react.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Foram criados componentes, containers e rotas. Além da chamada da API.

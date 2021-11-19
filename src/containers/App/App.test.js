@@ -6,6 +6,6 @@ import App from "./App";
 describe('App component', () => {
   it('Show header', () => {
     render(<App />);
-    expect(screen.getByText('Header')).toBeInTheDocument();
+    expect(screen.getByText('Entrar')).toBeInTheDocument();
   })
 }) 

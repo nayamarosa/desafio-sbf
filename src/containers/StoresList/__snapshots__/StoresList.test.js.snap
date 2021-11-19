@@ -2,38 +2,140 @@
 
 exports[`Stores List Route same snapshot list container 1`] = `
 <div>
-  <li>
-    <p>
+  <li
+    class="stores__list-item"
+  >
+    <p
+      class="stores__list-item--title"
+    >
       loja1
     </p>
-    <p>
-      rua1
-    </p>
-    <p>
-      horário de funcionamento
-    </p>
+    <a
+      class="show-map"
+      href="/"
+    >
+      <img
+        alt="Ver no mapa"
+        src="./images/icon_pin_link.svg"
+      />
+      <p
+        class="stores__list-item--map"
+      >
+        Ver no mapa
+      </p>
+    </a>
+    <div
+      class="stores__list-item-group"
+    >
+      <p
+        class="stores__list-item--address"
+      >
+        rua1
+      </p>
+      <p
+        class="stores__list-item--time"
+      >
+        Atendimento:
+      </p>
+      <p
+        class="stores__list-item--time"
+      >
+        Segunda a Sábado 10h às 22h | Domingo 11h às 20h
+      </p>
+      <span>
+        Disponível em 4 dias úteis
+      </span>
+    </div>
   </li>
-  <li>
-    <p>
+  <li
+    class="stores__list-item"
+  >
+    <p
+      class="stores__list-item--title"
+    >
       loja2
     </p>
-    <p>
-      rua2
-    </p>
-    <p>
-      horário de funcionamento
-    </p>
+    <a
+      class="show-map"
+      href="/"
+    >
+      <img
+        alt="Ver no mapa"
+        src="./images/icon_pin_link.svg"
+      />
+      <p
+        class="stores__list-item--map"
+      >
+        Ver no mapa
+      </p>
+    </a>
+    <div
+      class="stores__list-item-group"
+    >
+      <p
+        class="stores__list-item--address"
+      >
+        rua2
+      </p>
+      <p
+        class="stores__list-item--time"
+      >
+        Atendimento:
+      </p>
+      <p
+        class="stores__list-item--time"
+      >
+        Segunda a Sábado 10h às 22h | Domingo 11h às 20h
+      </p>
+      <span>
+        Disponível em 4 dias úteis
+      </span>
+    </div>
   </li>
-  <li>
-    <p>
+  <li
+    class="stores__list-item"
+  >
+    <p
+      class="stores__list-item--title"
+    >
       loja3
     </p>
-    <p>
-      rua3
-    </p>
-    <p>
-      horário de funcionamento
-    </p>
+    <a
+      class="show-map"
+      href="/"
+    >
+      <img
+        alt="Ver no mapa"
+        src="./images/icon_pin_link.svg"
+      />
+      <p
+        class="stores__list-item--map"
+      >
+        Ver no mapa
+      </p>
+    </a>
+    <div
+      class="stores__list-item-group"
+    >
+      <p
+        class="stores__list-item--address"
+      >
+        rua3
+      </p>
+      <p
+        class="stores__list-item--time"
+      >
+        Atendimento:
+      </p>
+      <p
+        class="stores__list-item--time"
+      >
+        Segunda a Sábado 10h às 22h | Domingo 11h às 20h
+      </p>
+      <span>
+        Disponível em 4 dias úteis
+      </span>
+    </div>
   </li>
 </div>
 `;
